@@ -39,7 +39,7 @@
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fsx="http://www.fdsn.org/xml/station/1"
 	targetNamespace="http://www.fdsn.org/xml/station/1" elementFormDefault="qualified"
-	attributeFormDefault="unqualified" version="1.1-nsl.0">
+	attributeFormDefault="unqualified" version="1.1-nsl.1">
 	<xs:annotation>
 		<xs:documentation> FDSN StationXML schema. Designed as an XML representation of SEED
 			metadata, the schema maps to the most important and commonly used structures of SEED
@@ -444,7 +444,7 @@
 				<xs:element name="Polynomial" type="fsx:PolynomialType" minOccurs="0"/>
 			</xs:choice>
 			<xs:element name="Decimation" type="fsx:DecimationType" minOccurs="0"/>
-			<xs:element name="StageGain" type="fsx:GainType">
+			<xs:element name="StageGain" type="fsx:GainType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>StageSensitivity is the gain at the stage of the encapsulating
 						response element and corresponds to SEED blockette 58. In the SEED
